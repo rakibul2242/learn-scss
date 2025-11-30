@@ -1,0 +1,10 @@
+// scss/main.scss
+$primary: #4f46e5;
+$text: #222;
+
+.card {
+  background: $primary;
+  color: $text;
+  padding: 20px;
+  border-radius: 12px;
+}
