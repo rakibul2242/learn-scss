@@ -1,3 +1,6 @@
+/* import  button*/
+@use "buttons";
+
 /* VARIABLES */
 $primary: #4f46e5;
 $text: #222;
@@ -39,6 +42,8 @@ $size1: 200px;
 
 .card {
   @include box;
+  @include buttons.button-base;
+
   background: white;
   color: $text;
   margin-top: -30px;

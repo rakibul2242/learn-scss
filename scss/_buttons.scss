@@ -1,0 +1,13 @@
+$primary-color: #4f46e5;
+
+@mixin button-base {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button {
+  @include button-base;
+  background: $primary-color;
+  color: white;
+}
