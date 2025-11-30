@@ -1,10 +1,110 @@
-// scss/main.scss
+/* VARIABLES */
 $primary: #4f46e5;
 $text: #222;
+$size1: 200px;
+
+/* MIXINS */
+@mixin box {
+  border-radius: 16px;
+  padding: 20px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* NESTING */
+.hero {
+  @include box;
+  background: $primary;
+  color: white;
+  padding: 40px;
+  text-align: center;
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 33px;
+
+    &:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  }
+
+  p {
+    opacity: 0.9;
+  }
+}
 
 .card {
-  background: $primary;
+  @include box;
+  background: white;
   color: $text;
-  padding: 20px;
-  border-radius: 12px;
+  margin-top: -30px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  button {
+    background: $primary;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+// ul > {
+//   li {
+//     list-style-type: none;
+//   }
+//   &:hover {
+//     opacity: 0.9;
+//   }
+// }
+
+h2 {
+  + p {
+    border-top: 1px solid gray;
+  }
+}
+
+p {
+  ~ {
+    span {
+      opacity: 0.8;
+    }
+  }
+}
+
+.circle {
+  $size: $size1;
+  width: $size;
+  height: $size;
+  border-radius: $size * 0.5;
+}
+
+.square {
+  $size: 100px;
+  width: $size;
+  height: $size;
+}
+
+// placeholder se;llector
+
+.alert:hover,
+%strong-alert {
+  font-weight: bold;
+}
+
+%strong-alert:hover {
+  color: red;
 }
